@@ -2,6 +2,8 @@
 
 namespace ds_and_algo
 {
+
+
     public class BinarySearchRecursiveFindIncreaseOrNull
     {
         [TestCase(-1, 0, 0, 0, 0, 0, 0)]
@@ -18,23 +20,19 @@ namespace ds_and_algo
 
         public static int GetIndex(int[] data)
         {
-            int min = 0;
-            int max = data.Length - 1;
+            if (data[0] == 1) return -1;
+            if (data[data.Length - 1] == 0) return -1;
+            return GetIndex(data, 0, data.Length - 1);
+        }
 
-            if (data[min] == 1) return -1;
-            if (data[max] == 0) return -1;
-
-            while (true)
-            {
-                var mid = (min + max) / 2;
-                if (max - min == 1) {
-                    return max;
-                }
-                if (data[mid] == 0)
-                    min = mid;
-                else
-                    max = mid;
+        public static int GetIndex(int[] data, int startIndex, int endIndex)
+        {
+            if (endIndex - startIndex == 1) {
+                return endIndex;
             }
+            var mid = (startIndex + endIndex) / 2;
+            if (data[mid] == 0) return GetIndex(data, mid, endIndex);
+            return GetIndex(data, startIndex, mid);
         }
     }
 }

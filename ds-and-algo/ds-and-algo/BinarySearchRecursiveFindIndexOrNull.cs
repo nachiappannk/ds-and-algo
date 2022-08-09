@@ -19,18 +19,19 @@ namespace ds_and_algo
 
         public static int GetIndex(int[] data, int x)
         {
-            int min = 0;
-            int max = data.Length - 1;
+            return GetIndex(data, x, 0, data.Length - 1);
+        }
 
-            while (true) {
-                var mid = (min + max) / 2;
-                if (data[mid] == x) return mid;
-                if (data[max] == x) return max;
-                if (max - min <= 1) return -1;
+        public static int GetIndex(int[] data, int x, int startIndex, int endIndex)
+        {
+            var midIndex = (startIndex + endIndex) / 2;
+            if (data[midIndex] == x) return midIndex;
+            if (data[endIndex] == x) return endIndex;
 
-                if (data[mid] < x) min = mid;
-                if (data[mid] > x) max = mid;
-            }
+            if (endIndex - startIndex <= 1) return -1;
+
+            if (x < data[midIndex]) return GetIndex(data, x, startIndex, midIndex);
+            return GetIndex(data, x, midIndex, endIndex);
         }
     }
 }
