@@ -30,7 +30,6 @@ namespace ds_and_algo
 
                 if (data[mid] < x) min = mid;
                 if (data[mid] > x) max = mid;
-
             }
         }
     }
