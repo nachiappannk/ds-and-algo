@@ -9,7 +9,7 @@ namespace ds_and_algo
         {
             var sum = 0;
             for (int i = 0; i < data.Length; i++) {
-                sum = sum = data[i];
+                sum = sum + data[i];
             }
 
             Sort(data);
@@ -17,7 +17,7 @@ namespace ds_and_algo
             var sum1 = 0;
             for (int i = 0; i < data.Length; i++)
             {
-                sum1 = sum1 = data[i];
+                sum1 = sum1 + data[i];
             }
 
             Assert.AreEqual(sum, sum1);
@@ -49,29 +49,13 @@ namespace ds_and_algo
             int k = 0;
             while (i <= mid && j <= endIndex) 
             {
-                if (data[i] < data[j]) {
-                    temp[k] = data[i];
-                    i++;
+                if (data[i] < data[j]) temp[k++] = data[i++];
+                else temp[k++] = data[j++];
+            }
 
-                }
-                else {
-                    temp[k] = data[j];
-                    j++;
-                }
-                k++;
-            }
-            while (i <= mid)
-            {
-                temp[k] = data[i];
-                i++;
-                k++;
-            }
-            while (j <= endIndex)
-            {
-                temp[k] = data[j];
-                j++;
-                k++;
-            }
+            while (i <= mid) temp[k++] = data[i++];
+
+            while (j <= endIndex) temp[k++] = data[j++];
 
             for (int x = 0; x < endIndex + 1 - startIndex; x++) {
                 data[startIndex + x] = temp[x];
