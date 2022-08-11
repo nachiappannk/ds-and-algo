@@ -70,20 +70,20 @@ namespace ds_and_algo
 
                 var current = 0;
 
-                while (true) {
+                while (true) {  // Its easier to run loop always and break when conditions are not met
                     var c1 = 2 * current + 1;
                     var c2 = 2 * current + 2;
-                    if (!IsValid(c1)) break;
+                    if (!IsValid(c1)) break; //Break when no valid child
 
                     var smallerChildIndex = c1;
                     if (IsValid(c2) && data[c2] < data[c1]) smallerChildIndex = c2;
 
-                    if (data[current] <= data[smallerChildIndex]) break;
+                    if (data[current] <= data[smallerChildIndex]) break; // Break when parent is smaller than smallest child
                     Swap(current, smallerChildIndex);
                     current = smallerChildIndex;
                 }
 
-                size--;
+                size--; //Make sure to decrent this last
                 return result;
             }
 
@@ -92,12 +92,12 @@ namespace ds_and_algo
                 data.Add(x);
                 size++;
                 var currentIndex = size - 1;
-                while (true) {
+                while (true) { // Its easier to run loop always and break when conditions are not met
                     var parent = GetParentIndex(currentIndex);
-                    if (data[currentIndex] >= data[parent]) break;
+                    if (data[currentIndex] >= data[parent]) break; //Break when parent is smaller already
                     Swap(currentIndex, parent);
                     currentIndex = parent;
-                    if (currentIndex <= 0) break;
+                    if (currentIndex <= 0) break; // break when reached the top of the heap
                 }
             }
 
