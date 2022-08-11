@@ -3,6 +3,11 @@ using System;
 
 namespace ds_and_algo
 {
+    //Merge sort is a stable sorting algorithm
+    //There are some in place implementation of it. They are either too complex or push the run time complexity higher
+    //The best time is n Log n
+    //The worst time is n Log n
+    //The average time is n Log n
     public class MergeSortRecursiveTopDown
     {
         [TestCase(3, 4, 1, 2, 3, 4, 6, 7)]
