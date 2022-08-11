@@ -1,8 +1,9 @@
 ﻿using NUnit.Framework;
+using System;
 
 namespace ds_and_algo
 {
-    public class MergeSort
+    public class MergeSortRecursiveTopDown
     {
         [TestCase(3, 4, 1, 2, 3, 4, 6, 7)]
         public void Tests(params int[] data)
@@ -24,7 +25,6 @@ namespace ds_and_algo
             for (int i = 1; i < data.Length; i++) {
                 if (data[i - 1] > data[i]) Assert.Fail("Not sorted");
             }
-
         }
 
         private void Sort(int[] data)
@@ -61,6 +61,5 @@ namespace ds_and_algo
                 data[startIndex + x] = temp[x];
             }
         }
-
     }
 }
