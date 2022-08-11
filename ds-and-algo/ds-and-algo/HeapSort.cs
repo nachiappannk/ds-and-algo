@@ -3,6 +3,12 @@ using System.Collections.Generic;
 
 namespace ds_and_algo
 {
+    // The best case time complexity is n log n
+    // the worst case time complexity is n log n
+    // the average case time complexity is n log n
+    // This is NOT a stable sort
+    // The memory requirment for heap sort in O(1) (This implementation has to be done)
+
     public class HeapSort
     {
 
