@@ -85,11 +85,6 @@ namespace ds_and_algo
             {
                 charArray.RemoveAt(charArray.Count - 1);
             }
-
-            public string GetResult()
-            { 
-                
-            }
         }
     
     }
