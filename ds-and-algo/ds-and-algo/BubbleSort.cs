@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 
 namespace ds_and_algo
 {
@@ -37,9 +39,10 @@ namespace ds_and_algo
         {
             for (int i = 0; i < data.Length; i++)
             {
-                for (int j = 0; j < data.Length - i -1; j++) 
+                for (int j = 0; j < data.Length - i - 1; j++)
                 {
-                    if (data[j] > data[j + 1]) {
+                    if (data[j] > data[j + 1])
+                    {
                         var temp = data[j];
                         data[j] = data[j + 1];
                         data[j + 1] = temp;
@@ -47,5 +50,47 @@ namespace ds_and_algo
                 }
             }
         }
+    }
+
+    public class SortedSet
+    {
+        [Test]
+        public void Test() 
+        {
+            
+            //IComparer can be passed as input
+            SortedSet<int> sortedSet = new SortedSet<int>();
+            //Add method takes Log N
+            //Min method takes Log N
+            //Remove Method takes Log N
+            //ContainsKey takes Log N
+            
+            sortedSet.Add(5);
+            sortedSet.Add(3);
+            sortedSet.Add(2);
+            sortedSet.Add(8);
+            sortedSet.Add(1);
+
+            
+            //Duplicate elements are not allowed. Adding a duplicate element will ignore it
+            var result = sortedSet.Add(1);
+
+            
+
+            Console.WriteLine(result);
+
+
+            foreach (int i in sortedSet)
+            { 
+                Console.WriteLine(i);
+            }
+
+
+            Console.WriteLine("Contained 5 " + sortedSet.Contains(5));
+            Console.WriteLine("Contained 7 " + sortedSet.Contains(7));
+
+        }
+        
+
     }
 }
