@@ -1,0 +1,46 @@
+Minimum spanning tree
+Prims
+Kruskal
+Union Find
+
+Adjacency Matrix
+Adjacency List
+
+
+
+Weighted graph
+Unweighted graph
+
+directed and undirected graph
+
+Component vs connected components
+
+nodes -> vertices
+Edges 
+components
+
+
+
+Cycle detection
+bitartie
+Number of components example
+If a graph is tree
+
+DFS with recurssion and stack
+
+Directed graphs shorted part : BFS
+Directed graphs cycles : DFS
+Directed graphs components : DFS
+
+
+https://leetcode.com/problems/course-schedule/description/
+https://leetcode.com/problems/course-schedule-ii/description/
+https://leetcode.com/problems/min-cost-to-connect-all-points/
+
+
+A graph can have cycles or may not having cycles - Cyclic Graph and Acyclic Graph
+A graph edge may have weights or not - Weighted and non weighted graph
+A graph's edge may be directed or not - Directed and undirected graph
+
+
+
