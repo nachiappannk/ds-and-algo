@@ -75,7 +75,10 @@ namespace ds_and_algo
             //Duplicate elements are not allowed. Adding a duplicate element will ignore it
             var result = sortedSet.Add(1);
 
-            
+            //AVL tree is a self balancing binary search tree
+            //https://www.youtube.com/watch?v=vRwi_UcZGjU
+            //Implementation of sort list and set could be based on self balancing binary search tree
+
 
             Console.WriteLine(result);
 
