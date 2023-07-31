@@ -39,8 +39,10 @@ https://leetcode.com/problems/min-cost-to-connect-all-points/
 
 
 A graph can have cycles or may not having cycles - Cyclic Graph and Acyclic Graph
-A graph edge may have weights or not - Weighted and non weighted graph
+A graph edge may have weights or not - Weighted and unweighted graph
 A graph's edge may be directed or not - Directed and undirected graph
 
+A component is sub graph that is not connected with other part of the graph (Only in undirected graphs)
 
-
+cyclic or acyclic, Undirected and unweighted graph - cycle detection : BFS/DFS
+cyclic or acyclic, Undirected and unweighted graph - Bipartite Graph : BFS/DFS
